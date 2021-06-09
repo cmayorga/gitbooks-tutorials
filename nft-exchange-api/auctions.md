@@ -1,7 +1,9 @@
+<style>
+  ad { color: red }
+</style>
 ---
 description: API Endpoints For Auctions
 ---
-
 # Auctions
 
 ## List of Auction Endpoints
@@ -18,6 +20,7 @@ description: API Endpoints For Auctions
 ## GET - Return All Active Auctions
 
 Active auctions are auctions that have NOT been canceled or closed with a succesfull NFTAcceptTrade Transaction.
+- <ad> By default will include expired auctions also.</ad>
 
 ### Endpoint <a id="endpoint"></a>
 
@@ -32,7 +35,8 @@ GET /auctions
 | page | int | The number of the page that will be returned. | No |
 | limit | int | The number of resources per page. | No |
 | orderBy | string | Type by which should order resources. | No |
-| transform | boolean | If returns modified or raw data. | No |
+| transform | boolean | It returns modified or raw data. | No |
+- <ad>| expired | boolean | If true include expired auctions. | No |</ad>
 
 ### Example
 
